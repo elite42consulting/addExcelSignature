@@ -89,6 +89,8 @@ namespace addExcelSignature
                 Properties.Settings.Default.DefaultSignatureSavePath = dialog.FileName;
                 Properties.Settings.Default.Save();
 
+                TextBoxDefaultSignaturePath.Text = Properties.Settings.Default.DefaultSignatureSavePath;
+
                 this.DestinationFilePathName = await this.GetDestinationFile();
                 TextBoxDestinationFilePathName.Text = this.DestinationFilePathName;
             }
@@ -187,6 +189,8 @@ namespace addExcelSignature
         {
             Properties.Settings.Default.DefaultSignatureSavePath = string.Empty;
             Properties.Settings.Default.Save();
+
+            TextBoxDefaultSignaturePath.Text = Properties.Settings.Default.DefaultSignatureSavePath;
 
             this.DestinationFilePathName = await this.GetDestinationFile();
             TextBoxDestinationFilePathName.Text = this.DestinationFilePathName;
