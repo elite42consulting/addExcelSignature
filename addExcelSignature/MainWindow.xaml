@@ -1,0 +1,28 @@
+﻿<Window x:Class="addExcelSignature.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:addExcelSignature"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="582"
+        Loaded="Window_Loaded"
+        ContentRendered="Window_ContentRendered">
+    <Grid>
+
+        <TextBlock HorizontalAlignment="Left" Margin="38,38,0,0" TextWrapping="Wrap" Text="Excel File To Sign" VerticalAlignment="Top" Height="25" Width="500"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="38,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="371" Name="TextBoxSourceFilePathName" />
+        <Button Content="Select File To Sign" HorizontalAlignment="Left" Margin="414,63,0,0" VerticalAlignment="Top" Height="27" Width="124" Click="ChangeSourceFile"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,104,0,0" TextWrapping="Wrap" Text="Saving Signature Version Here" VerticalAlignment="Top" Height="25" Width="500"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="38,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" x:Name="TextBoxDestinationFilePathName"  IsReadOnly="True" />
+        <TextBlock HorizontalAlignment="Left" Margin="38,319,0,0" TextWrapping="Wrap" Text="Default Folder To Save In" VerticalAlignment="Top" Height="25" Width="500"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="38,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="242" x:Name="TextBoxDefaultSignaturePath"  />
+        <Button Content="Change Folder" HorizontalAlignment="Left" Margin="285,344,0,0" VerticalAlignment="Top" Height="27" Width="124" Click="ChangeDefaultSignaturePath"/>
+        <Button Content="Set to Same as Source" HorizontalAlignment="Left" Margin="414,344,0,0" VerticalAlignment="Top" Height="27" Width="124" Click="ClearDestinationPath"/>
+
+        <StatusBar Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="40" Panel.ZIndex="6" Width="582">
+            <Label Content="Generating Signature Copy..." Name="StatusText" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+        </StatusBar>
+        <Button Content="Generate and Sign File" HorizontalAlignment="Left" Margin="38,179,0,0" VerticalAlignment="Top" Height="27" Width="171" Click="Process"/>
+    </Grid>
+</Window>
