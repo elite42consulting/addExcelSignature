@@ -73,6 +73,9 @@ namespace addExcelSignature
 
                 this.DestinationFilePathName = await this.GetDestinationFile();
                 TextBoxDestinationFilePathName.Text = this.DestinationFilePathName;
+
+
+                StatusText.Content = "Ready";
             }
         }
 
@@ -131,8 +134,7 @@ namespace addExcelSignature
             }
         }
 
-        private async Task<string> GetDestinationFile()
-        {
+        private async Task<string> GetDestinationFile()        {
             if(this.SourceFilePathName==string.Empty)
             {
                 return "";
@@ -140,7 +142,7 @@ namespace addExcelSignature
 
             string sourceName = Path.GetFileNameWithoutExtension(this.SourceFilePathName);
             string sourcePath = Path.GetFullPath(this.SourceFilePathName).Replace(Path.GetFileName(this.SourceFilePathName), "");
-            string now = DateTime.Now.ToString("yyyy-mm-dd");
+            string now = DateTime.Now.ToString("yyyy-MM-dd");
             string destPath = Properties.Settings.Default.DefaultSignatureSavePath == string.Empty ? sourcePath : Properties.Settings.Default.DefaultSignatureSavePath;
             return (destPath + "\\" + sourceName + "-signature-" + now + ".xlsx").Replace("\\\\", "\\");
         }
