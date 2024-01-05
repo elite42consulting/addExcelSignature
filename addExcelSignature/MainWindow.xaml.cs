@@ -88,7 +88,11 @@ namespace addExcelSignature
             {
                 Properties.Settings.Default.DefaultSignatureSavePath = dialog.FileName;
                 Properties.Settings.Default.Save();
+
+                this.DestinationFilePathName = await this.GetDestinationFile();
+                TextBoxDestinationFilePathName.Text = this.DestinationFilePathName;
             }
+
         }
 
         private async void Process(object sender, RoutedEventArgs e)
