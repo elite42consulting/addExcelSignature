@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addExcelSignature", "addExcelSignature.csproj", "{51AE9E1A-AAEA-4118-87FD-E87FA71EDAB5}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "addExcelSignatureInstaller", "..\addExcelSignatureInstaller\addExcelSignatureInstaller.vdproj", "{47BA6F24-7737-440A-9B9C-1D23613DF620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{51AE9E1A-AAEA-4118-87FD-E87FA71EDAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51AE9E1A-AAEA-4118-87FD-E87FA71EDAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51AE9E1A-AAEA-4118-87FD-E87FA71EDAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BA6F24-7737-440A-9B9C-1D23613DF620}.Debug|Any CPU.ActiveCfg = Debug
+		{47BA6F24-7737-440A-9B9C-1D23613DF620}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
